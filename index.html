@@ -26,7 +26,17 @@
     <link rel="manifest" href="site.webmanifest">
 
 </head>
+<style>
+    .more-content {
+        display: none;
+    }
 
+    .read-more-btn {
+        color: blue;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+</style>
 <body id="top">
 
 
@@ -205,7 +215,7 @@
                     <div class="column lg-12" data-animate-block>
 
                         <h2 class="text-pretitle" data-animate-el>
-                            Recent Works
+                            Recent WorksthemewaGOIN
                         </h2>
                         <p class="h1" data-animate-el>
                             Here are my projects I have done lately. Feel free to check them out.
@@ -305,6 +315,48 @@
 
             </section> <!-- end s-works -->
 
+            <!-- blogs start -->
+            <section id="works" class="s-works target-section">
+
+
+                <div class="row works-portfolio">
+
+                    <div class="column lg-12" data-animate-block>
+
+                        <p class="h1" data-animate-el>
+                            My First Game Development Experience
+                        </p>
+
+                        <span class="text-pretitle" data-animate-el>
+                            I come from a small village in Nepal called ‘Aruchaur’, and I have always been interested in game development. After finally coming to Canada, I feel like I’ve taken one step closer to realizing that dream. At Georgian College, I enrolled in a diploma course in Game Design and Simulation. It was here that things finally started to feel real, like pressing “Start Game” on a lifelong passion.<br><br>
+                        </span>
+                        
+                        <!-- Hidden text that will be revealed -->
+                        <div id="moreText" class="text-pretitle" style="display:none;">
+                            By the end of our second semester, my team and I had built a 2D platformer game we called Cyber Summit. It was our first fully developed title, and to say we poured our hearts into it would be an understatement. Late nights, stubborn bugs, last-minute design pivots, it was all part of the journey. Honestly, I couldn’t have done it alone. Each of us brought something unique to the table, and together we created something we were proud of. Our hard work was rewarded when Cyber Summit was selected to be showcased at Level Up Toronto 2024, a major student game expo featuring over 150 games from colleges and universities across Ontario.<br><br>
+                        
+                            Walking into Level Up felt like stepping into the real-life version of a game lobby, dozens of booths, passionate creators and energy that could power a LAN party for days. As I walked around, I was blown away by the sheer variety and creativity on display. I saw a game that mirrored ours in genre and style, but they’d executed their mechanics and visual design in a way that felt complete and fluid. It was like looking at the evolved form of our own game. Instead of discouraging me, it opened my eyes. I started thinking about what we could’ve done differently and more importantly, what we could do next time to improve.<br><br>
+                        
+                            Then I stumbled upon a game that used real instruments, an electric guitar and drums as controllers. It was a part rhythm game and unlike anything I’d seen before. I personally would never have thought of that! It reminded me that game design isn’t just about refining existing mechanics but also about pushing boundaries and experimenting fearlessly. Just when I thought I had seen it all, I came across another student project that looked like a full-blown AAA title. Sure, the playable space was smaller, but the graphical fidelity and polish were something I didn't think was possible from a student team. It made me wonder if they had a Red Bull IV drip going 24/7.<br><br>
+                        
+                            Despite the tough competition, Cyber Summit earned an Honorable Mention in Artistic Design, which felt surreal. Out of over a hundred games, ours was singled out for its visual creativity. When our game’s name came up, it felt unreal. All the late nights, all the hard work, it finally paid off. For the first time, it felt like everything we did actually mattered. I’ll never forget that feeling, it was like getting that rare achievement notification in a game you didn’t even know you were close to unlocking.<br><br>
+                        
+                            Overall, Level Up Toronto didn’t just showcase games, it showcased what’s possible. It gave me inspiration, motivation, and a much needed reality check in the best way. I left the event more determined than ever to keep creating, keep learning, and keep failing forward. If Cyber Summit was Level 1, I can’t wait to see what’s waiting in the next stages. One thing’s for sure: I’ve picked up the controller and I’m not putting it down anytime soon.
+                        </div>
+                        
+                        <!-- Read more button -->
+                        <button onclick="showMore()">Read More</button>
+    
+             
+                    </div> <!-- end column -->                 
+
+                </div> <!-- end works-portfolio -->
+
+
+                
+
+            </section> <!-- blogs end -->
+
 
             <!-- ### contact
             ================================================== -->
@@ -375,6 +427,19 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        function showMore() {
+            var moreText = document.getElementById("moreText");
+            var btn = document.querySelector("button");
+            if (moreText.style.display === "none") {
+                moreText.style.display = "block";
+                btn.innerHTML = "Read Less"; 
+            } else {
+                moreText.style.display = "none";
+                btn.innerHTML = "Read More"; 
+            }
+        }
+    </script>
 
 </body>
 </html>
